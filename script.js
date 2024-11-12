@@ -35,3 +35,26 @@ function moyenneNotes(notes){
 }
 
 moyenneNotes([20,4,5]);
+
+
+// Autre façon avec plus de trois notes
+
+let tableauNotes = [];
+
+function moyenneDuTableau(tableauNotes){
+    let somme = 0;
+    for (let i = 0 ; i < tableauNotes.length; i++){
+        somme += tableauNotes[i];
+    }
+    let moyenneDesNotes = somme / tableauNotes.length;
+    //return moyenneDesNotes;
+    if (moyenneDesNotes >= 15){
+        console.log("Très bien");
+    } else if (moyenneDesNotes >= 10 && moyenneDesNotes < 15){
+        console.log("Assez bien");
+    } else {
+        console.log("Refus");
+    }
+}
+
+moyenneDuTableau([10,15,15,20,20]);
